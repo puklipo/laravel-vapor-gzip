@@ -1,6 +1,10 @@
 # Gzip Response middleware for Laravel Vapor
 
-## Install
+## Requirement
+- PHP ^8.0
+- Laravel 9.x
+
+## Installation
 ```
 composer require puklipo/laravel-vapor-gzip
 ```
