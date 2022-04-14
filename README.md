@@ -9,7 +9,7 @@
 composer require puklipo/laravel-vapor-gzip
 ```
 
-Add to `app/Kernel.php`
+Add to `app/Http/Kernel.php`
 
 ```diff
     protected $middleware = [
