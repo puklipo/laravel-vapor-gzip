@@ -1,5 +1,5 @@
 {
-    "name": "pop-culture-studio/laravel-vapor-gzip",
+    "name": "puklipo/laravel-vapor-gzip",
     "type": "library",
     "description": "Gzip Response middleware for Laravel Vapor",
     "keywords": ["laravel", "vapor", "gzip"],
@@ -11,7 +11,7 @@
     },
     "autoload": {
         "psr-4": {
-            "PopCultureStudio\\Vapor\\Middleware\\": "src/"
+            "Puklipo\\Vapor\\Middleware\\": "src/"
         }
     },
     "config": {

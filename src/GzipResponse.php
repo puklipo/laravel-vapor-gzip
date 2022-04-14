@@ -1,6 +1,6 @@
 <?php
 
-namespace PopCultureStudio\Vapor\Middleware;
+namespace Puklipo\Vapor\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
