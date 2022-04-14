@@ -1,13 +1,11 @@
 # Gzip Response middleware for Laravel Vapor
 
-自分で使うだけなのでpackagistへの登録はしてない。
-
+## Install
 ```
-composer config repositories.puklipo/laravel-vapor-gzip vcs https://github.com/pop-culture-studio/laravel-vapor-gzip
-composer require puklipo/laravel-vapor-gzip:dev-main
+composer require puklipo/laravel-vapor-gzip
 ```
 
-`app/Kernel.php`
+Add to `app/Kernel.php`
 
 ```diff
     protected $middleware = [
@@ -21,3 +19,6 @@ composer require puklipo/laravel-vapor-gzip:dev-main
 +       \Puklipo\Vapor\Middleware\GzipResponse::class,
     ];
 ```
+
+## LICENSE
+MIT

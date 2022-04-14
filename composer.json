@@ -4,6 +4,12 @@
     "description": "Gzip Response middleware for Laravel Vapor",
     "keywords": ["laravel", "vapor", "gzip"],
     "license": "MIT",
+    "authors": [
+        {
+            "name": "PCS",
+            "email": "pcs.engineer.team@gmail.com"
+        }
+    ],
     "require": {
         "php": "^8.0",
         "ext-zlib": "*",
