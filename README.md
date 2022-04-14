@@ -18,6 +18,6 @@ composer require pop-culture-studio/laravel-vapor-gzip:dev-main
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
         \App\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
-+        \PopCultureStudio\Vapor\Middleware\GzipResponse::class,
++       \PopCultureStudio\Vapor\Middleware\GzipResponse::class,
     ];
 ```
