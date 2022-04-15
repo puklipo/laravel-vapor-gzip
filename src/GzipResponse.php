@@ -45,7 +45,6 @@ class GzipResponse
     {
         return in_array('gzip', $request->getEncodings())
             && ! $response->headers->contains('Content-Encoding', 'gzip')
-            && function_exists('gzencode')
             && ! $response instanceof BinaryFileResponse;
     }
 }
