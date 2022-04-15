@@ -24,5 +24,13 @@ Add to `app/Http/Kernel.php`
     ];
 ```
 
+## When this package abandoned
+You can use just the `GzipResponse.php`. Copy to your Laravel project, and change namespace.
+
+```php
+namespace App\Http\Middleware;
+
+```
+
 ## LICENSE
 MIT
