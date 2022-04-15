@@ -1,7 +1,7 @@
 # Gzip Response middleware for Laravel Vapor
 
 ## Requirement
-- PHP ^8.0
+- PHP ^8.0 (+ext-zlib)
 - Laravel 8.x|9.x
 
 ## Installation
