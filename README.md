@@ -2,7 +2,7 @@
 
 ## Requirement
 - PHP ^8.0
-- Laravel 8.x||9.x
+- Laravel 8.x|9.x
 
 ## Installation
 ```
