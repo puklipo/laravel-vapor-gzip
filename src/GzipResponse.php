@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
+/**
+ * @license MIT
+ * @copyright PCS<pcs.engineer.team@gmail.com>
+ */
 class GzipResponse
 {
     /**
