@@ -5,7 +5,7 @@
 - Laravel 8.x|9.x
 
 ## Installation
-```
+```bash
 composer require puklipo/laravel-vapor-gzip
 ```
 
