@@ -38,7 +38,7 @@ class GzipResponse
 
     /**
      * @param  Request  $request
-     * @param  mixed  $response
+     * @param  mixed|Response|BinaryFileResponse  $response
      * @return bool
      */
     protected function shouldEncode(Request $request, mixed $response): bool
