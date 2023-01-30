@@ -28,7 +28,7 @@ class GzipResponse
         if ($this->shouldEncode($request, $response)) {
             $response->setContent(gzencode($response->content(), 9))
                      ->withHeaders([
-                         'Content-Encoding'      => 'gzip',
+                         'Content-Encoding' => 'gzip',
                          'X-Vapor-Base64-Encode' => 'True',
                      ]);
         }
@@ -44,6 +44,7 @@ class GzipResponse
     protected function shouldEncode(Request $request, mixed $response): bool
     {
         return in_array('gzip', $request->getEncodings())
+            && function_exists('gzencode')
             && ! $response->headers->contains('Content-Encoding', 'gzip')
             && ! $response instanceof BinaryFileResponse;
     }
