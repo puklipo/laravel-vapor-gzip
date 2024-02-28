@@ -9,7 +9,7 @@
 composer require puklipo/laravel-vapor-gzip
 ```
 
-### Laravel 11
+### Laravel 11 (Slim skeleton)
 Add to `bootstrap/app.php`
 
 ```php
