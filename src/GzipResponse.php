@@ -15,6 +15,11 @@ use Symfony\Component\HttpFoundation\BinaryFileResponse;
 class GzipResponse
 {
     /**
+     * @var callable
+     */
+    protected static $encodeWhen;
+
+    /**
      * Handle an incoming request.
      *
      * @param  Request  $request
@@ -44,10 +49,23 @@ class GzipResponse
      */
     protected function shouldEncode(Request $request, mixed $response): bool
     {
+        if (static::$encodeWhen) {
+            return call_user_func(static::$encodeWhen, $request, $response);
+        }
+
         return in_array('gzip', $request->getEncodings())
             && $request->method() === 'GET'
             && function_exists('gzencode')
             && ! $response->headers->contains('Content-Encoding', 'gzip')
             && ! $response instanceof BinaryFileResponse;
+    }
+
+    /**
+     * @param  callable(Request $request, mixed $response): bool  $encodeWhen
+     * @return void
+     */
+    public static function encodeWhen(callable $encodeWhen): void
+    {
+        static::$encodeWhen = $encodeWhen;
     }
 }

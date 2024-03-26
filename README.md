@@ -36,6 +36,24 @@ Add to `app/Http/Kernel.php`
     ];
 ```
 
+## Customize "When to encode with gzip?"
+`App\Providers\AppServiceProvider`
+```php
+use Illuminate\Http\Request;
+use Puklipo\Vapor\Middleware\GzipResponse;
+
+public function boot(): void
+{
+    GzipResponse::encodeWhen(function (Request $request, mixed $response): bool {
+        return in_array('gzip', $request->getEncodings())
+            && $request->method() === 'GET'
+            && function_exists('gzencode')
+            && ! $response->headers->contains('Content-Encoding', 'gzip')
+            && ! $response instanceof BinaryFileResponse;
+    });
+}
+```
+
 ## When this package abandoned
 You can use just the `GzipResponse.php`. Copy to your Laravel project, and change namespace.
 
