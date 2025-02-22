@@ -1,15 +1,15 @@
 # Gzip Response middleware for Laravel Vapor
 
 ## Requirement
-- PHP ^8.1 (+ext-zlib)
-- Laravel ^10.x
+- PHP ^8.2 (+ext-zlib)
+- Laravel ^11.x
 
 ## Installation
 ```bash
 composer require puklipo/laravel-vapor-gzip
 ```
 
-### Laravel 11 (Slim skeleton)
+### Slim skeleton (Laravel 11 or later)
 Add to `bootstrap/app.php`
 
 ```php
@@ -20,7 +20,7 @@ use Puklipo\Vapor\Middleware\GzipResponse::class;
 })
 ```
 
-### Laravel 10
+### Legacy kernel
 Add to `app/Http/Kernel.php`
 
 ```diff
